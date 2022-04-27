@@ -1,0 +1,34 @@
+---
+- hosts: localhost
+  connection: local
+
+  vars:
+  - users_details:
+    - name: 'user01'
+      uid: 1001
+      groups: ['hpcnow']
+    - name: 'user02'
+      uid: 1002
+      groups: ['hpcnow']
+
+  tasks:
+
+  - name: Install EPEL repository
+    yum: name=epel-release state=present
+    when: ansible_os_family == "RedHat"
+
+  - name: Install packages | RedHat
+    XXXXXXX
+
+  - name: Install devel tools | RedHat
+    XXXXXXX
+
+  - name: Ensure group "hpcnow" exists with correct gid
+    ansible.builtin.group:
+      name: hpcnow
+      state: present
+      gid: 1001
+
+  - name: Create users
+    XXXXXXX
+
