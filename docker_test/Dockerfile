@@ -23,6 +23,6 @@ RUN dnf -y update && \
         python3 \
         python3-pip \
         libibverbs-devel \
-        which && \
-     XXXX
+        which
+RUN XXXX
 
