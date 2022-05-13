@@ -1,8 +1,7 @@
 FROM XXXX
 
 # Install packages dependencies
-RUN dnf -y update && \
-    dnf clean all && \
+RUN dnf clean all && \
     dnf -y install epel-release && \
     dnf -y install dnf-plugins-core && \
     dnf config-manager --set-enabled powertools && \
