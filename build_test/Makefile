@@ -1,6 +1,6 @@
 
-CC=icc
-OPTS=-qopenmp
+CC=gcc
+OPTS=-fopenmp
 
 APPS= hello factorial
 
